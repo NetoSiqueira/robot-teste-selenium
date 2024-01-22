@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.0rc3 on win32)" generated="2024-01-22T11:25:52.186186" rpa="false" schemaversion="5">
+<suite id="s1" name="loginSeuBarriga" source="C:\QAX\robot-selenium\loginSeuBarriga.robot">
+<test id="s1-t1" name="Cenário 1: Cadastro com sucesso" line="40">
+<kw name=" Dado que o usuario acesse o site seuBarriga">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-01-22T11:25:52.329658" level="INFO">Opening browser 'chrome' to base url 'https://seubarriga.wcaquino.me/'.</msg>
+<arg>https://seubarriga.wcaquino.me/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-01-22T11:25:52.329658" elapsed="1.962803"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-01-22T11:25:54.292461" elapsed="0.110532"/>
+</kw>
+<status status="PASS" start="2024-01-22T11:25:52.329658" elapsed="2.074336"/>
+</kw>
+<kw name="E usuario clicar em cadastrar novo usuario">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-01-22T11:25:54.403994" level="INFO">Clicking link 'xpath=//a[@href="/cadastro"]'.</msg>
+<arg>xpath=//a[@href="/cadastro"]</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-22T11:25:54.403994" elapsed="0.164351"/>
+</kw>
+<status status="PASS" start="2024-01-22T11:25:54.403994" elapsed="0.164351"/>
+</kw>
+<kw name="Quando o usuario inserir o nome">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-01-22T11:25:54.568345" level="INFO">Typing text 'teste' into text field '//input[@id="nome"]'.</msg>
+<arg>${input_nome}</arg>
+<arg>${campo_nome}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-22T11:25:54.568345" elapsed="0.052703"/>
+</kw>
+<status status="PASS" start="2024-01-22T11:25:54.568345" elapsed="0.052703"/>
+</kw>
+<kw name="E o usuario inserir o email">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-01-22T11:25:54.621048" level="INFO">Typing text 'teste@testando5.com' into text field '//input[@id="email"]'.</msg>
+<arg>${input_email}</arg>
+<arg>${campo_email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-22T11:25:54.621048" elapsed="0.047010"/>
+</kw>
+<status status="PASS" start="2024-01-22T11:25:54.621048" elapsed="0.047010"/>
+</kw>
+<kw name="E o usuario inserir a senha">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-01-22T11:25:54.669059" level="INFO">Typing text 'teste' into text field '//input[@id="senha"]'.</msg>
+<arg>${input_senha}</arg>
+<arg>${campo_senha}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-22T11:25:54.668058" elapsed="0.043516"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-01-22T11:25:54.805801" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-14.png"&gt;&lt;img src="selenium-screenshot-14.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-01-22T11:25:54.711574" elapsed="0.094227"/>
+</kw>
+<status status="PASS" start="2024-01-22T11:25:54.668058" elapsed="0.137743"/>
+</kw>
+<kw name="E o usuario clicar em cadastrar">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-01-22T11:25:54.806801" level="INFO">Clicking element '//input[@class="btn btn-primary"]'.</msg>
+<arg>${input_bnt}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-22T11:25:54.806801" elapsed="0.365269"/>
+</kw>
+<status status="PASS" start="2024-01-22T11:25:54.806801" elapsed="0.365269"/>
+</kw>
+<kw name="Entao o sistema exibe uma mensagem">
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-01-22T11:25:55.173069" level="INFO">Verifying element '//div[@class="alert alert-success"]' contains exact text 'Usuário inserido com sucesso1'.</msg>
+<msg time="2024-01-22T11:25:55.273851" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-15.png"&gt;&lt;img src="selenium-screenshot-15.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-01-22T11:25:55.273851" level="FAIL">The text of element '//div[@class="alert alert-success"]' should have been 'Usuário inserido com sucesso1' but it was 'Usuário inserido com sucesso'.</msg>
+<arg>${alerta_sucesso}</arg>
+<arg>Usuário inserido com sucesso1</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="FAIL" start="2024-01-22T11:25:55.173069" elapsed="0.101782">The text of element '//div[@class="alert alert-success"]' should have been 'Usuário inserido com sucesso1' but it was 'Usuário inserido com sucesso'.</status>
+</kw>
+<status status="FAIL" start="2024-01-22T11:25:55.172070" elapsed="0.103781">The text of element '//div[@class="alert alert-success"]' should have been 'Usuário inserido com sucesso1' but it was 'Usuário inserido com sucesso'.</status>
+</kw>
+<status status="FAIL" start="2024-01-22T11:25:52.328658" elapsed="2.947193">The text of element '//div[@class="alert alert-success"]' should have been 'Usuário inserido com sucesso1' but it was 'Usuário inserido com sucesso'.</status>
+</test>
+<status status="FAIL" start="2024-01-22T11:25:52.187187" elapsed="3.089665"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="loginSeuBarriga">loginSeuBarriga</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
